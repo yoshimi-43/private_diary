@@ -128,3 +128,42 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ロギング設定
+LOGGING = {
+  'version': 1,
+  'disable_existing_loggers': False,
+
+  # ロガーの設定
+  'loggers': {
+    'django': {
+      'handlers': [('consol')],
+      'level': 'INFO'
+    },
+    'diary': {
+      'handlers': ['console'],
+      'level': 'DEBUG'
+    }
+  },
+
+  # ハンドラの設定
+  'handlers': {
+    'console': {
+      'lebel': 'DEBUG',
+      'class': 'logging.StreamHandler',
+      'formatter': 'dev'
+    }
+  },
+
+  # フォーマッタの設定
+  'formatters': {
+    'dev': {
+      'format': '\t'.join([
+        '%(asctime)s',
+        '[%(levelname)s]',
+        '%(pathname)s(Line:%(Lineno)d)',
+        '%(message)s'
+      ])
+    }
+  }
+}
