@@ -137,7 +137,7 @@ LOGGING = {
   # ロガーの設定
   'loggers': {
     'django': {
-      'handlers': [('consol')],
+      'handlers': [('console')],
       'level': 'INFO'
     },
     'diary': {
@@ -149,7 +149,7 @@ LOGGING = {
   # ハンドラの設定
   'handlers': {
     'console': {
-      'lebel': 'DEBUG',
+      'level': 'DEBUG',
       'class': 'logging.StreamHandler',
       'formatter': 'dev'
     }
