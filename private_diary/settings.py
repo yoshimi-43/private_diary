@@ -161,7 +161,7 @@ LOGGING = {
       'format': '\t'.join([
         '%(asctime)s',
         '[%(levelname)s]',
-        '%(pathname)s(Line:%(Lineno)d)',
+        '%(pathname)s(Line:%(lineno)d)',
         '%(message)s'
       ])
     }
