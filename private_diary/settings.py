@@ -83,7 +83,7 @@ DATABASES = {
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
-        'PORT': '',
+        'PORT': os.environ.get('DB_PORT')
     }
 }
 
@@ -137,7 +137,7 @@ LOGGING = {
   # ロガーの設定
   'loggers': {
     'django': {
-      'handlers': [('console')],
+      'handlers': ['console'],
       'level': 'INFO'
     },
     'diary': {
