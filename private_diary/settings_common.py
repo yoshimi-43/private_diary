@@ -137,6 +137,7 @@ STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static'),
 )
 
+MEDIA_URL = '/media/'
 
 MESSAGE_TAGS = {
     messages.ERROR: 'alert alert-danger',
