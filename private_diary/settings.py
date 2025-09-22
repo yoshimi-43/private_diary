@@ -19,7 +19,7 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 EMAIL_BACKEND = 'django_ses.SESBackend'
 AWS_SES_REGION_NAME = 'ap-northeast-1'
-AWS_SES_REGION_ENDPOINT = ''
+AWS_SES_REGION_ENDPOINT = 'email.ap-northeast-1.amazonaws.com'
 
 
 # ロギング
